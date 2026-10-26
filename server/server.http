@@ -1,0 +1,26 @@
+@server_address = http://127.0.0.1:8000
+
+# POST {{server_address}}/api/rag/
+# Content-Type: application/json
+
+# {
+#     "query": "What is the capital of France?"
+# }
+
+
+# POST {{server_address}}/api/success_prediction/
+# Content-Type: application/json
+
+# {
+#     "input_data": "Some input data for success prediction"
+# }
+
+POST {{server_address}}/api/funding_analysis/
+Content-Type: application/json
+
+{
+    "startup_name": "Tech Innovators",
+    "founder_name" : "John Doe",
+    "industry" : "Technology",
+    "funding_amount" : 1000000.0
+}
