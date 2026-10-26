@@ -1,9 +1,42 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Project Context: UBSP
 
-## This is NOT the Next.js you know
+UBSP is a lightweight AI-powered startup analysis application designed to help users explore startup-related insights and make more informed decisions.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+The application currently has three core features:
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+1. **RAG Assistant** — allows users to ask questions and receive AI-generated answers using a retrieval-augmented generation system.
+2. **Funding Analysis** — accepts startup-related inputs and helps users identify relevant investor types or potential investors.
+3. **Success Prediction** — evaluates startup-related parameters and returns a predicted success percentage.
 
-<!-- END:nextjs-agent-rules -->
+# Important Command
+Never edit fastapi server
+Changes should only be in client folder
+
+A fourth feature, **Market Study**, is planned for the future. Its exact functionality and workflow are still under discussion, so do not make assumptions about its implementation.
+
+## Expected Application Experience
+
+UBSP should feel like a modern, polished SaaS application rather than a traditional marketing website or a complex analytics dashboard.
+
+- Users should enter the application directly without a login, registration, or authentication flow.
+- Use a persistent sidebar as the primary navigation, with a separate option for each feature.
+- The home page should provide a brief introduction to UBSP and an overview of its available features.
+- Each implemented feature should eventually have its own dedicated workspace.
+- Market Study can appear as a disabled or "Coming soon" navigation item.
+- The overall interface should be simple, intuitive, responsive, and focused on helping users complete their tasks.
+
+## Design Direction
+
+Aim for a professional, contemporary interface with excellent visual hierarchy, consistent spacing, clean typography, and subtle interactions.
+
+Use shadcn/ui and Tailwind CSS for the UI foundation, with Motion for React for restrained animations where appropriate. Lucide icons may be used for navigation and feature identification.
+
+The existing project already has its theme and font configured in the global CSS and layout. Preserve these settings and build around them rather than introducing a new design system.
+
+## Scope of This Stage
+
+At this stage, the goal is to understand the application, establish the overall layout and navigation, and prepare a reusable frontend foundation.
+
+Do not decide the detailed forms, input parameters, output structures, API integration, or workflows for individual features yet. These will be discussed and implemented separately once the requirements are finalized.
+
+Inspect the existing codebase before proposing or making changes. Follow its current Next.js structure and conventions, avoid unnecessary dependencies, and keep the implementation modular so that new features can be added easily.
